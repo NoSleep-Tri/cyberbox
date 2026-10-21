@@ -6,12 +6,15 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Definitions
 add_definitions(-D__ANDROID__)
-add_definitions(-DIMGUI_IMPL_OPENGL_ES3)
+
+# Root of the repo is 4 levels up from this CMakeLists.txt:
+# CMakeLists.txt is in: android/app/src/main/cpp
+set(CYBERBOX_ROOT ${CMAKE_CURRENT_SOURCE_DIR}/../../../../)
 
 # Include directories
 include_directories(
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../src
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../include
+    ${CYBERBOX_ROOT}/src
+    ${CYBERBOX_ROOT}/include
     ${ANDROID_NDK}/sources/android/native_app_glue
 )
 
@@ -20,17 +23,10 @@ add_library(app_glue STATIC
     ${ANDROID_NDK}/sources/android/native_app_glue/android_native_app_glue.c
 )
 
-# ImGui core and Android backends
-file(GLOB IMGUI_SOURCES
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../src/imgui/*.cpp
-)
-
 # CyberBox Core Sources for Android
 set(CYBERBOX_SOURCES
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../src/android_main.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../src/android_native_sandbox.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../src/ai_client.cpp
-    ${IMGUI_SOURCES}
+    ${CYBERBOX_ROOT}/src/android_main.cpp
+    ${CYBERBOX_ROOT}/src/android_native_sandbox.cpp
 )
 
 # Main Native Shared Library (.so) loaded by NativeActivity
