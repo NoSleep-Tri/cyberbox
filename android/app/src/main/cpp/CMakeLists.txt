@@ -7,9 +7,16 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # Definitions
 add_definitions(-D__ANDROID__)
 
-# Root of the repo is 4 levels up from this CMakeLists.txt:
-# CMakeLists.txt is in: android/app/src/main/cpp
-set(CYBERBOX_ROOT ${CMAKE_CURRENT_SOURCE_DIR}/../../../../)
+# Root of the repo is 5 levels up:
+# CMAKE_CURRENT_SOURCE_DIR is: <repo>/android/app/src/main/cpp
+# ../ => <repo>/android/app/src/main
+# ../../ => <repo>/android/app/src
+# ../../../ => <repo>/android/app
+# ../../../../ => <repo>/android
+# ../../../../../ => <repo>
+get_filename_component(CYBERBOX_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/../../../../.." ABSOLUTE)
+
+message(STATUS "CYBERBOX_ROOT: ${CYBERBOX_ROOT}")
 
 # Include directories
 include_directories(
