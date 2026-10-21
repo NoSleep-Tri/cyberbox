@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberBox Sandbox Web & App Inspector</title>
+    <style>
+        :root {
+            --bg: #0f0f12;
+            --card: #18181c;
+            --accent: #af52de;
+            --accent-glow: rgba(175, 82, 222, 0.35);
+            --text-main: #f5f5f7;
+            --text-sub: #a1a1aa;
+            --border: rgba(255, 255, 255, 0.08);
+        }
+        body {
+            margin: 0;
+            padding: 24px;
+            background: var(--bg);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 85vh;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 640px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px 28px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(175, 82, 222, 0.15);
+            color: #d178f7;
+            border: 1px solid var(--accent-glow);
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 16px;
+        }
+        h1 {
+            font-size: 22px;
+            margin: 0 0 10px 0;
+            font-weight: 600;
+        }
+        p {
+            font-size: 13.5px;
+            color: var(--text-sub);
+            line-height: 1.6;
+            margin: 0 0 24px 0;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            text-align: left;
+            margin-bottom: 24px;
+        }
+        .feat-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            padding: 12px 14px;
+            border-radius: 10px;
+        }
+        .feat-title {
+            font-size: 12.5px;
+            font-weight: 600;
+            color: #70baff;
+            margin-bottom: 4px;
+        }
+        .feat-desc {
+            font-size: 11.5px;
+            color: var(--text-sub);
+            line-height: 1.4;
+        }
+        .pulse-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #30d158;
+            border-radius: 50%;
+            margin-right: 6px;
+            box-shadow: 0 0 8px rgba(48, 209, 88, 0.7);
+        }
+        .status-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #30d158;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="badge">Win32 Jail & Container Environment</div>
+        <h1>🌐 Trình duyệt Sandbox & Xem trước Web</h1>
+        <p>Không gian kiểm thử và hiển thị các sản phẩm web, ứng dụng GUI, hoặc dịch vụ mạng do Agent Muse trực tiếp lập trình và chạy trong môi trường Sandbox cô lập.</p>
+        
+        <div class="features">
+            <div class="feat-item">
+                <div class="feat-title">⚡ Xem trước tức thì (Live Preview)</div>
+                <div class="feat-desc">Hiển thị trực tiếp các tệp HTML, CSS, JS vừa tạo trong <code>sandbox_workspace</code> mà không cần reload server.</div>
+            </div>
+            <div class="feat-item">
+                <div class="feat-title">🚪 Cổng Gateway & Forwarding</div>
+                <div class="feat-desc">Tự động kết nối tới các Web Server C++/Python chạy trong sandbox qua các cổng đã mở.</div>
+            </div>
+            <div class="feat-item">
+                <div class="feat-title">🛡️ Cách ly bảo mật tuyệt đối</div>
+                <div class="feat-desc">Không thể truy cập tệp nhạy cảm bên ngoài host. Tất cả đều an toàn trong Jail.</div>
+            </div>
+            <div class="feat-item">
+                <div class="feat-title">🖥️ Mở trình duyệt Host</div>
+                <div class="feat-desc">Nút "Mở ngoài máy" cho phép mở thẳng trang web trong Microsoft Edge / Chrome thật.</div>
+            </div>
+        </div>
+
+        <div class="status-bar">
+            <span class="pulse-dot"></span> Sẵn sàng xem trước sản phẩm do Muse tạo tác
+        </div>
+    </div>
+</body>
+</html>

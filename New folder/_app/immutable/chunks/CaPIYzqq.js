@@ -1,0 +1,1 @@
+import{i as d,u,j as n,k as c,l as i}from"./xQis4Trd.js";function l(s,o,r){d(()=>{var a=u(()=>o(s,r?.())||{});if(r&&a?.update){var t=!1,f={};n(()=>{var e=r();c(e),t&&i(f,e)&&(f=e,a.update(e))}),t=!0}if(a?.destroy)return()=>a.destroy()})}export{l as a};

@@ -1,0 +1,1 @@
+import{q as o,O as y,o as v,P as T,Q as l,R as f,y as p,S as R,x as i,T as m,z as A}from"./xQis4Trd.js";function x(d,_,e){var s;o&&(s=A,y());var r=new R(d);v(()=>{var a=_()??null;if(o){var h=l(s),c=h===m,u=a!==null;if(c!==u){var t=f();p(t),r.anchor=t,i(!1),r.ensure(a,a&&(n=>e(n,a))),i(!0);return}}r.ensure(a,a&&(n=>e(n,a)))},T)}export{x as c};

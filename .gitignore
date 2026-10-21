@@ -1,0 +1,31 @@
+# Build artifacts
+*.exe
+*.obj
+*.pdb
+*.ilk
+*.lib
+*.exp
+*.log
+
+# Android build outputs & local properties
+.gradle/
+build/
+android/.gradle/
+android/app/build/
+android/local.properties
+android/.cxx/
+
+# Screenshots & temp test dumps
+*.png
+test_screenshot.png
+dump_image.ps1
+inspect_bars.ps1
+inspect_bars_y.ps1
+scan_row.ps1
+
+# Editor & OS files
+.vscode/
+.idea/
+*.suo
+*.user
+Thumbs.db

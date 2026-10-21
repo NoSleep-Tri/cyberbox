@@ -1,0 +1,1 @@
+@call browser.bat %*

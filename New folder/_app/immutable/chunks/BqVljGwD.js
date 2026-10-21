@@ -1,0 +1,1 @@
+import{i as e}from"./BLZ4Hq6P.js";import{e as i}from"./BTvZ2TY1.js";class n{static async setContentProtection(t){try{return await e("set_content_protection",{enabled:t})}catch(r){throw await i.handlePrivilegedError(r),r}}static async hideFromTaskSwitcher(t){return await e("hide_from_task_switcher",{hide:t})}}export{n as PrivacyService};
